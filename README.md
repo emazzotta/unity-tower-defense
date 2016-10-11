@@ -5,8 +5,11 @@ An exercise to work with Unity.
 ## Authors
 
 [Emanuele Mazzotta](mailto:hello@mazzotta.me)
+
 [Marc Illien](mailto:marc.illien@siroop.ch)
+
 [Chris Beyeler](mailto:chris.beyeler@siroop.ch)
+
 [Magnus Hofer](mailto:magnus.hofer@siroop.ch)
 
 ## License
