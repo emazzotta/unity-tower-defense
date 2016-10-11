@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2016 Emanuele Mazzotta, Marc Illien, Chris Beyeler
+Copyright (c) 2016 Emanuele Mazzotta, Marc Illien, Chris Beyeler, Magnus Hofer 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
