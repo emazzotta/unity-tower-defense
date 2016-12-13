@@ -19,8 +19,9 @@ public class GameController : MonoBehaviour {
 			for (int z = 0; z < gameField.transform.localScale.z; z++) {
 				GameObject newTowerBase = Instantiate (towerBase);
 				newTowerBase.AddComponent<Rigidbody> ();
-				newTowerBase.transform.parent = towerBase.transform;
 				newTowerBase.transform.position = new Vector3 (towerBase.transform.position.x+x, 0.1f, towerBase.transform.position.z-z);
+				// TODO:: Set transform to Parent. 
+				// Doesn't work: newTowerBase.transform.SetParent (towerBase.transform);
 			}
 		}
 	}
