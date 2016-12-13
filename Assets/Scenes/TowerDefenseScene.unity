@@ -130,7 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09677afde603444e8a9c836f873c4235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 1625208959}
+  towerBase: {fileID: 1625208959}
+  gameField: {fileID: 1697604737}
 --- !u!1 &1168638606
 GameObject:
   m_ObjectHideFlags: 0
