@@ -74,3 +74,5 @@ jspm_packages
 
 # Unity specific
 Temp/
+/Assets/.DS_Store
+/.DS_Store
