@@ -21,7 +21,6 @@ public class GameController : MonoBehaviour {
 		for (int x = 0; x < this.gameFieldWidth; x++) {
 			for (int z = 0; z < this.gameFieldHeight; z++) {
 				GameObject newTowerBase = Instantiate (towerBase);
-				newTowerBase.AddComponent<Rigidbody> ();
 				newTowerBase.transform.position = new Vector3 (towerBase.transform.position.x+x, 0.1f, towerBase.transform.position.z-z);
 				this.towerBases [x, z] = newTowerBase;
 			}
