@@ -3,6 +3,7 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 
+	public  GameObject towerBaseWrap;
 	public	GameObject towerBase;
 	public 	GameObject gameField;
 	private GameObject[,] towerBases;
@@ -23,6 +24,7 @@ public class GameController : MonoBehaviour {
 				GameObject newTowerBase = Instantiate (towerBase);
 				newTowerBase.transform.position = new Vector3 (towerBase.transform.position.x+x, 0.1f, towerBase.transform.position.z-z);
 				this.towerBases [x, z] = newTowerBase;
+				newTowerBase.transform.SetParent (towerBaseWrap.transform);
 			}
 		}
 
