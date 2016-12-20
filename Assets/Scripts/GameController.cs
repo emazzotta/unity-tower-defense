@@ -13,12 +13,11 @@ public class GameController : MonoBehaviour {
 
 	void Start () {
 		this.wayColor = Color.Lerp(Color.red, Color.green, 0F);
-
 		this.gameFieldWidth = (int)(gameField.transform.localScale.x);
 		this.gameFieldHeight = (int)(gameField.transform.localScale.z);
 		this.towerBases = new GameObject[this.gameFieldWidth, this.gameFieldHeight];
 		this.initGamePlatform ();
-		this.drawWayPoint ();
+		this.drawWaypoint ();
 	}
 
 	void initGamePlatform() {
@@ -26,6 +25,7 @@ public class GameController : MonoBehaviour {
 		for (int x = 0; x < this.gameFieldWidth; x++) {
 			for (int z = 0; z < this.gameFieldHeight; z++) {
 				GameObject newTowerBase = Instantiate (towerBase);
+				newTowerBase.GetComponent<TowerBaseController>().setBuildable(true); 
 				newTowerBase.transform.position = new Vector3 (towerBase.transform.position.x + x, 0.1f, towerBase.transform.position.z - z);
 				this.towerBases [x, z] = newTowerBase;
 				newTowerBase.transform.SetParent (towerBaseWrap.transform);
@@ -37,11 +37,11 @@ public class GameController : MonoBehaviour {
 			
 	}
 
-	void drawWayPoint() {
+	void drawWaypoint() {
 		for (int x = 0; x < this.gameFieldWidth; x++) {
-			GameObject baseX = this.towerBases [x, 5];
-			baseX.GetComponent<Renderer> ().material.color = wayColor;
+			GameObject baseZ = this.towerBases [x, 5];
+			baseZ.GetComponent<Renderer> ().material.color = wayColor;
+			baseZ.GetComponent<TowerBaseController>().setBuildable(false);
 		}
 	}
-
 }

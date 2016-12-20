@@ -731,7 +731,7 @@ GameObject:
   - 23: {fileID: 1625208960}
   - 114: {fileID: 1625208964}
   m_Layer: 0
-  m_Name: TowerBaseDerHurensohn
+  m_Name: TowerBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -806,7 +806,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1625208959}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb6f9a0961d44788af6226b344ca931, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a7830181818a44ecb5eaf540b102443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   towerToPlace: {fileID: 1865775262}
