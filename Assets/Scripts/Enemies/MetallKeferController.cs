@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AntController : MonoBehaviour {
+public class MetallKeferController : MonoBehaviour {
 
 	private GameObject baseStart;
 
@@ -15,7 +15,7 @@ public class AntController : MonoBehaviour {
 	
 	}
 
-	void FindInitialWaypoint() {
+	void FindInititalWaypoint() {
 		Debug.Log ("Ant Controller Start");
 	}
 }
