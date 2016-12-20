@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerBaseWrap: {fileID: 1422813645}
-  towerBase: {fileID: 1625208959}
+  originalTowerBase: {fileID: 1625208959}
   gameField: {fileID: 1697604737}
 --- !u!1 &334757038
 GameObject:
@@ -619,6 +619,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1 &1377874984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1377874986}
+  - 114: {fileID: 1377874985}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1377874985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1377874984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4015ab734d8a641f2b2cb17f6c67b2c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalEnemy: {fileID: 2118316476}
+  amountOfEnemies: 5
+--- !u!4 &1377874986
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1377874984}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.477, y: 0, z: -0.61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
 --- !u!1 &1422813645
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,3 +959,7 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 165880, guid: f4f6b630159e6b34386dec2579f250b2, type: 2}
   m_PrefabInternal: {fileID: 366664889}
+--- !u!1 &2118316476 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
+  m_PrefabInternal: {fileID: 1194923779}

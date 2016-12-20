@@ -15,7 +15,6 @@ public class TowerBaseController : MonoBehaviour {
 
 	public void setBuildable(bool buildable) {
 		this.buildable = buildable;
-		Debug.Log ("Has been set " + this.buildable.ToString());
 	}
 
 	public bool isBuildable() {
