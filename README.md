@@ -8,10 +8,6 @@ An exercise to work with Unity.
 
 [Marc Illien](mailto:marc.illien@siroop.ch)
 
-[Chris Beyeler](mailto:chris.beyeler@siroop.ch)
-
-[Magnus Hofer](mailto:magnus.hofer@siroop.ch)
-
 ## License
 
-[MIT License](LICENSE.md) © Emanuele Mazzotta, Marc Illien, Chris Beyeler, Magnus Hofer 
+[MIT License](LICENSE.md) © Emanuele Mazzotta, Marc Illien
