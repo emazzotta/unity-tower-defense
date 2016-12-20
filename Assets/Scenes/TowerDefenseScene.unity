@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44692492, g: 0.4967869, b: 0.57508546, a: 1}
+  m_IndirectSpecularColor: {r: 0.44692534, g: 0.49678725, b: 0.57508564, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -646,7 +646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4015ab734d8a641f2b2cb17f6c67b2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalEnemy: {fileID: 2118316476}
+  originalEnemy: {fileID: 1125557740}
   amountOfEnemies: 5
 --- !u!4 &1377874986
 Transform:
@@ -959,7 +959,3 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 165880, guid: f4f6b630159e6b34386dec2579f250b2, type: 2}
   m_PrefabInternal: {fileID: 366664889}
---- !u!1 &2118316476 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
-  m_PrefabInternal: {fileID: 1194923779}
