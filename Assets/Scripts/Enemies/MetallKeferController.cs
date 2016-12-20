@@ -3,6 +3,7 @@ using System.Collections;
 
 public class MetallKeferController : MonoBehaviour {
 
+	public GameObject towerBasesWaypoint;
 	private GameObject baseStart;
 
 	// Use this for initialization
@@ -16,6 +17,6 @@ public class MetallKeferController : MonoBehaviour {
 	}
 
 	void FindInititalWaypoint() {
-		Debug.Log ("Ant Controller Start");
+		Debug.Log ("MetallKefer Controller Start");
 	}
 }
