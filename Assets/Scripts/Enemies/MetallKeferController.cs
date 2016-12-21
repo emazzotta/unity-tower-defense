@@ -3,20 +3,16 @@ using System.Collections;
 
 public class MetallKeferController : MonoBehaviour {
 
-	public GameObject towerBasesWaypoint;
-	private GameObject baseStart;
+	public GameObject gameControllerObject;
+	private GameController gameController;
+	private GameObject[] towerBasesBuildable;
 
-	// Use this for initialization
 	void Start () {
+		this.gameController = this.gameControllerObject.GetComponent<GameController>();
 		this.FindInititalWaypoint ();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
 	void FindInititalWaypoint() {
-		Debug.Log ("MetallKefer Controller Start");
+		
 	}
 }
