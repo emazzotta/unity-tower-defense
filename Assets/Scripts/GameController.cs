@@ -14,7 +14,7 @@ public class GameController : MonoBehaviour {
 	private int gameFieldHeight = 0;
 	private Color wayColor;
 
-	void Start () {
+	void Awake () {
 		this.wayColor = Color.Lerp(Color.red, Color.green, 0F);
 		this.gameFieldWidth = (int)(gameField.transform.localScale.x);
 		this.gameFieldHeight = (int)(gameField.transform.localScale.z);
