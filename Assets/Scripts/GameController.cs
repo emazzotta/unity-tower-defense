@@ -6,7 +6,10 @@ public class GameController : MonoBehaviour {
 	public GameObject towerBaseWrap;
 	public GameObject originalTowerBase;
 	public GameObject gameField;
+
 	private GameObject[,] towerBases;
+	private GameObject[] waypoints;
+
 	private int gameFieldWidth = 0;
 	private int gameFieldHeight = 0;
 	private Color wayColor;
@@ -16,6 +19,8 @@ public class GameController : MonoBehaviour {
 		this.gameFieldWidth = (int)(gameField.transform.localScale.x);
 		this.gameFieldHeight = (int)(gameField.transform.localScale.z);
 		this.towerBases = new GameObject[this.gameFieldWidth, this.gameFieldHeight];
+		this.waypoints = new GameObject[this.gameFieldWidth];
+
 		this.initGamePlatform ();
 		this.drawWaypoint ();
 	}
@@ -40,6 +45,11 @@ public class GameController : MonoBehaviour {
 			GameObject baseZ = this.towerBases [x, 5];
 			baseZ.GetComponent<Renderer> ().material.color = wayColor;
 			baseZ.GetComponent<TowerBaseController>().setBuildable(false);
+			this.waypoints[x] = baseZ;
 		}
+	}
+
+	public GameObject[] getWaypoints() {
+		return this.waypoints;
 	}
 }
