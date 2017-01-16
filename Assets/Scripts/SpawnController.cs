@@ -13,10 +13,5 @@ public class SpawnController : MonoBehaviour {
 			anEnemy.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y + 0.1f, this.transform.position.z);
 			anEnemy.transform.SetParent (EnemiesFolder.transform);
 		}
-		Destroy (originalEnemy);
-	}
-	
-	void Update () {
-	
 	}
 }

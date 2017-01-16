@@ -33,9 +33,6 @@ public class GameController : MonoBehaviour {
 				this.towerBases [x, z] = newTowerBase;
 			}
 		}
-
-		Destroy (originalTowerBase);
-			
 	}
 
 	void drawWaypoint() {
