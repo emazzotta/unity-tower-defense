@@ -12,6 +12,7 @@ public class MetallKeferController : MonoBehaviour {
 	void Start () {
 		this.gameController = GameObject.FindObjectOfType<GameController>();
 		this.nextWaypiont = this.gameController.getWaypoints () [this.currentWaypointIndex];
+		this.setInitialWaypoint ();
 	}
 	
 	void Update() {
@@ -29,6 +30,10 @@ public class MetallKeferController : MonoBehaviour {
 	private Color getRandomColor() {
 		Color newColor = new Color( Random.value, Random.value, Random.value, 1.0f );
 		return newColor;
+	}
+
+	private void setInitialWaypoint() {
+		this.transform.position = this.nextWaypiont.transform.position;
 	}
 
 	private void moveToNextWaypoint() {
