@@ -6,10 +6,12 @@ public class MetallKeferController : MonoBehaviour {
 	private GameController gameController;
 	private GameObject[] baseBuildable;
 	private GameObject nextWaypiont;
+    private float health;
 	private int currentWaypointIndex = 0;
 	private int movementSpeed = 2;
 
 	void Start () {
+        this.health = 100;
 		this.gameController = GameObject.FindObjectOfType<GameController>();
 		this.nextWaypiont = this.gameController.getWaypoints () [this.currentWaypointIndex];
 		this.setInitialWaypoint ();
@@ -43,4 +45,7 @@ public class MetallKeferController : MonoBehaviour {
 		this.SetNextWaypoint ();
 	}
 
+    public void TakeDamage(float damage) {
+        health -= damage;
+    }
 }

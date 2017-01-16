@@ -22,25 +22,25 @@ public class TowerController : MonoBehaviour {
 	
 	void Update () {
 		// TODO: Optimize this!
-		Metallkefer[] enemies = GameObject.FindObjectsOfType<Metallkefer>();
+		MetallKeferController[] enemies = GameObject.FindObjectsOfType<MetallKeferController>();
 
-		Metallkefer nearestMetallkefer = null;
+		MetallKeferController nearestMetallKeferController = null;
 		float dist = Mathf.Infinity;
 
-		foreach(Metallkefer e in enemies) {
+		foreach(MetallKeferController e in enemies) {
 			float d = Vector3.Distance(this.transform.position, e.transform.position);
-			if(nearestMetallkefer == null || d < dist) {
-				nearestMetallkefer = e;
+			if(nearestMetallKeferController == null || d < dist) {
+				nearestMetallKeferController = e;
 				dist = d;
 			}
 		}
 
-		if(nearestMetallkefer == null) {
+		if(nearestMetallKeferController == null) {
 			Debug.Log("No enemies?");
 			return;
 		}
 
-		Vector3 dir = nearestMetallkefer.transform.position - this.transform.position;
+		Vector3 dir = nearestMetallKeferController.transform.position - this.transform.position;
 
 		Quaternion lookRot = Quaternion.LookRotation( dir );
 
@@ -50,15 +50,15 @@ public class TowerController : MonoBehaviour {
 		fireCooldownLeft -= Time.deltaTime;
 		if(fireCooldownLeft <= 0 && dir.magnitude <= range) {
 			fireCooldownLeft = fireCooldown;
-			ShootAt(nearestMetallkefer);
+			ShootAt(nearestMetallKeferController);
 		}
 
 	}
 
-	void ShootAt(Metallkefer e) {
+	void ShootAt(MetallKeferController e) {
 		GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, this.transform.position, this.transform.rotation);
 
-		Bullet b = bulletGO.GetComponent<Bullet>();
+		BulletController b = bulletGO.GetComponent<BulletController>();
 		b.target = e.transform;
 		b.damage = damage;
 		b.radius = radius;
