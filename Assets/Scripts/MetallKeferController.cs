@@ -12,7 +12,7 @@ public class MetallKeferController : MonoBehaviour {
 	void Start () {
 		this.gameController = GameObject.FindObjectOfType<GameController>();
 		this.nextWaypiont = this.gameController.getWaypoints () [this.currentWaypointIndex];
-		this.setInitialWaypoint ();
+		this.setInitialPosition ();
 	}
 	
 	void Update() {
@@ -32,7 +32,7 @@ public class MetallKeferController : MonoBehaviour {
 		return newColor;
 	}
 
-	private void setInitialWaypoint() {
+	private void setInitialPosition() {
 		this.transform.position = this.nextWaypiont.transform.position;
 	}
 
