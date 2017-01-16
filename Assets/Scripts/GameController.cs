@@ -3,7 +3,6 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 
-	public GameObject towerBaseWrap;
 	public GameObject originalTowerBase;
 	public GameObject gameField;
 
@@ -32,7 +31,6 @@ public class GameController : MonoBehaviour {
 				newTowerBase.GetComponent<TowerBaseController>().setBuildable(true); 
 				newTowerBase.transform.position = new Vector3 (originalTowerBase.transform.position.x + x, 0.1f, originalTowerBase.transform.position.z - z);
 				this.towerBases [x, z] = newTowerBase;
-				newTowerBase.transform.SetParent (towerBaseWrap.transform);
 			}
 		}
 
