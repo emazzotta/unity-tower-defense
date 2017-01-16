@@ -574,7 +574,7 @@ MonoBehaviour:
   EnemiesFolder: {fileID: 1423638645}
   originalEnemy: {fileID: 1000012413404144, guid: e1d901d81e0b84460bb3b15ef273ecf1,
     type: 2}
-  amountOfEnemies: 2
+  amountOfEnemies: 20
 --- !u!4 &1377874986
 Transform:
   m_ObjectHideFlags: 0
