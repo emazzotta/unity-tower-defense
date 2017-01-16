@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour {
 			for (int z = 0; z < this.gameFieldHeight; z++) {
 				GameObject newTowerBase = Instantiate (originalBase);
 				newTowerBase.transform.SetParent (baseFolder.transform);
-				newTowerBase.GetComponent<TowerBaseController>().setBuildable(true); 
+				newTowerBase.GetComponent<BaseController>().setBuildable(true); 
 				newTowerBase.transform.position = new Vector3 (originalBase.transform.position.x + x, 0.1f, originalBase.transform.position.z - z);
 				this.bases [x, z] = newTowerBase;
 			}
@@ -42,7 +42,7 @@ public class GameController : MonoBehaviour {
 		for (int x = 0; x < this.gameFieldWidth; x++) {
 			GameObject baseZ = this.bases [x, 5];
 			baseZ.GetComponent<Renderer> ().material.color = wayColor;
-			baseZ.GetComponent<TowerBaseController>().setBuildable(false);
+			baseZ.GetComponent<BaseController>().setBuildable(false);
 			this.waypoints[x] = baseZ;
 		}
 	}
