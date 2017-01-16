@@ -3,15 +3,14 @@ using System.Collections;
 
 public class MetallKeferController : MonoBehaviour {
 
-	public GameObject gameControllerObject;
 	private GameController gameController;
-	private GameObject[] towerBasesBuildable;
+	private GameObject[] baseBuildable;
 	private GameObject nextWaypiont;
 	private int currentWaypointIndex = 0;
 	private int movementSpeed = 2;
 
 	void Start () {
-		this.gameController = this.gameControllerObject.GetComponent<GameController>();
+		this.gameController = GameObject.FindObjectOfType<GameController>();
 		this.nextWaypiont = this.gameController.getWaypoints () [this.currentWaypointIndex];
 	}
 	
@@ -25,7 +24,6 @@ public class MetallKeferController : MonoBehaviour {
 			this.nextWaypiont = this.gameController.getWaypoints () [this.currentWaypointIndex];
 			this.nextWaypiont.GetComponent<Renderer> ().material.color = this.getRandomColor();
 		}
-
 	}
 
 	private Color getRandomColor() {

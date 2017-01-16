@@ -24,7 +24,7 @@ GameObject:
   - 23: {fileID: 23000012543647388}
   - 114: {fileID: 114000013052018632}
   m_Layer: 0
-  m_Name: TowerBase
+  m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a7830181818a44ecb5eaf540b102443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerWrap: {fileID: 0}
   towerToPlace: {fileID: 1000013623077270, guid: 4d78cdfd495e241ae8899de66ca20862,
     type: 2}
   buildable: 0
