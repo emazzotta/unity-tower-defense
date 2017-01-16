@@ -9,7 +9,6 @@ public class MetallKeferController : MonoBehaviour {
 	private GameObject nextWaypiont;
 	private int currentWaypointIndex = 0;
 	private int movementSpeed = 2;
-	private float step = 10f;
 
 	void Start () {
 		this.gameController = this.gameControllerObject.GetComponent<GameController>();
