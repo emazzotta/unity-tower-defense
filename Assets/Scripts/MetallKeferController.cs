@@ -42,7 +42,9 @@ public class MetallKeferController : MonoBehaviour {
 		float step = movementSpeed * Time.deltaTime;
 		this.transform.LookAt (this.nextWaypiont.transform);
 		this.transform.position = Vector3.MoveTowards(transform.position, this.nextWaypiont.transform.position, step);
-		this.SetNextWaypoint ();
+		if (this.transform.position.Equals( this.nextWaypiont.transform.position )) {
+			this.SetNextWaypoint ();
+		}
 	}
 
     public void TakeDamage(float damage) {

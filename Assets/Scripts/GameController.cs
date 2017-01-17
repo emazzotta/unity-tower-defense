@@ -43,8 +43,6 @@ public class GameController : MonoBehaviour {
 		int zAxis = 5;
 		int x = 0;
 		while (x < this.gameFieldWidth) {
-			Debug.Log (zAxis);
-			Debug.Log (this.gameFieldHeight);
 			GameObject baseZ = this.bases[x, zAxis];
 			baseZ.GetComponent<Renderer> ().material.color = wayColor;
 			baseZ.GetComponent<BaseController>().setBuildable(false);
