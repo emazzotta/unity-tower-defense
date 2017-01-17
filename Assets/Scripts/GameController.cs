@@ -43,7 +43,8 @@ public class GameController : MonoBehaviour {
 		int zAxis = 5;
 		int x = 0;
 		while (x < this.gameFieldWidth) {
-
+			Debug.Log (zAxis);
+			Debug.Log (this.gameFieldHeight);
 			GameObject baseZ = this.bases[x, zAxis];
 			baseZ.GetComponent<Renderer> ().material.color = wayColor;
 			baseZ.GetComponent<BaseController>().setBuildable(false);
@@ -51,12 +52,20 @@ public class GameController : MonoBehaviour {
 
 			float randNumber = (float)Math.Round(UnityEngine.Random.Range(-1.0f, 1.0f));
 
-			if (zAxis > 0 && zAxis < this.gameFieldHeight - 1) {
-				zAxis += (int)randNumber;
+			if ( randNumber != 0 ) {
+				x += 1;
 			}
 
-			if (randNumber != 0) {
-				x += 1;
+			if ( zAxis >= -1 && zAxis <= this.gameFieldHeight + 1 ) {
+				zAxis += (int)randNumber;
+			} 
+
+			if ( zAxis < 1 ) {
+				zAxis += 1;
+			}
+
+			if ( zAxis >= this.gameFieldHeight ) {
+				zAxis -= 1;
 			}
 		}
 	}
