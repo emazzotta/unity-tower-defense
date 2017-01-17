@@ -40,8 +40,13 @@ public class MetallKeferController : MonoBehaviour {
 
 	private void moveToNextWaypoint() {
 		float step = movementSpeed * Time.deltaTime;
-		this.transform.LookAt (this.nextWaypiont.transform);
+
+		var targetRotation = Quaternion.LookRotation(this.nextWaypiont.transform.position - transform.position);
+		transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5 * Time.deltaTime);
+
+		//this.transform.LookAt (this.nextWaypiont.transform);
 		this.transform.position = Vector3.MoveTowards(transform.position, this.nextWaypiont.transform.position, step);
+
 		if (this.transform.position.Equals( this.nextWaypiont.transform.position )) {
 			this.SetNextWaypoint ();
 		}
