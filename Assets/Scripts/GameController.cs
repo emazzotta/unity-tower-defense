@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class GameController : MonoBehaviour {
 
@@ -15,7 +16,7 @@ public class GameController : MonoBehaviour {
 	private Color wayColor;
 
 	void Awake () {
-		this.wayColor = Color.Lerp(Color.red, Color.green, 0F);
+		this.wayColor = Color.Lerp(Color.green, Color.green, 0F);
 		this.gameField = GameObject.Find("Ground");   
 		this.gameFieldWidth = (int)(gameField.transform.localScale.x);
 		this.gameFieldHeight = (int)(gameField.transform.localScale.z);
@@ -39,11 +40,24 @@ public class GameController : MonoBehaviour {
 	}
 
 	void drawWaypoint() {
-		for (int x = 0; x < this.gameFieldWidth; x++) {
-			GameObject baseZ = this.bases [x, 5];
+		int zAxis = 5;
+		int x = 0;
+		while (x < this.gameFieldWidth) {
+
+			GameObject baseZ = this.bases[x, zAxis];
 			baseZ.GetComponent<Renderer> ().material.color = wayColor;
 			baseZ.GetComponent<BaseController>().setBuildable(false);
 			this.waypoints[x] = baseZ;
+
+			float randNumber = (float)Math.Round(UnityEngine.Random.Range(-1.0f, 1.0f));
+
+			if (zAxis > 0 && zAxis < this.gameFieldHeight - 1) {
+				zAxis += (int)randNumber;
+			}
+
+			if (randNumber != 0) {
+				x += 1;
+			}
 		}
 	}
 
