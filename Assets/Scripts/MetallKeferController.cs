@@ -19,6 +19,10 @@ public class MetallKeferController : MonoBehaviour {
 	
 	void Update() {
 		this.moveToNextWaypoint ();
+
+		if (this.transform.position.Equals( this.nextWaypiont.transform.position )) {
+			this.SetNextWaypoint ();
+		}
 	}
 
 	void SetNextWaypoint() {
@@ -44,12 +48,7 @@ public class MetallKeferController : MonoBehaviour {
 		var targetRotation = Quaternion.LookRotation(this.nextWaypiont.transform.position - transform.position);
 		transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5 * Time.deltaTime);
 
-		//this.transform.LookAt (this.nextWaypiont.transform);
 		this.transform.position = Vector3.MoveTowards(transform.position, this.nextWaypiont.transform.position, step);
-
-		if (this.transform.position.Equals( this.nextWaypiont.transform.position )) {
-			this.SetNextWaypoint ();
-		}
 	}
 
     public void TakeDamage(float damage) {
