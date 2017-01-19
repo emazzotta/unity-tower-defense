@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 95000012754488150}
   - component: {fileID: 114000010972664644}
   m_Layer: 0
-  m_Name: MetallKefer
+  m_Name: Metallkefer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
