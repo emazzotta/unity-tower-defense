@@ -4,7 +4,7 @@ using System.Collections;
 public class Bullet : MonoBehaviour {
 
 	[HideInInspector]
-	public MetallKeferController target;
+	public MetallKefer target;
 
     public float speed = 2f;
     public int damage;
@@ -32,9 +32,9 @@ public class Bullet : MonoBehaviour {
 	}
 
     void DoBulletHit() {
-		MetallKeferController e = target.GetComponent<MetallKeferController>();
+		MetallKefer e = target.GetComponent<MetallKefer>();
 		if(e != null) {
-			e.GetComponent<MetallKeferController>().TakeDamage(damage);
+			e.GetComponent<MetallKefer>().TakeDamage(damage);
 		}
     }
 

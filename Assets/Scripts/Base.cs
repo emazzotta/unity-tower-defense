@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BaseController : MonoBehaviour {
+public class Base : MonoBehaviour {
 
 	public GameObject towerToPlace;
 	public bool buildable;

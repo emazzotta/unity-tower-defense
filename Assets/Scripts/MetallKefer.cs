@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MetallKeferController : MonoBehaviour {
+public class MetallKefer : MonoBehaviour {
 
-	private GameController gameController;
+	private Game game;
 	private GameObject[] baseBuildable;
 	private GameObject nextWaypiont;
     private int health;
@@ -12,8 +12,8 @@ public class MetallKeferController : MonoBehaviour {
 
 	void Start () {
         this.health = 100;
-		this.gameController = GameObject.FindObjectOfType<GameController>();
-		this.nextWaypiont = this.gameController.getWaypoints () [this.currentWaypointIndex];
+		this.game = GameObject.FindObjectOfType<Game>();
+		this.nextWaypiont = this.game.getWaypoints () [this.currentWaypointIndex];
 		this.setInitialPosition ();
 	}
 	
@@ -26,9 +26,9 @@ public class MetallKeferController : MonoBehaviour {
 	}
 
 	void SetNextWaypoint() {
-		if (this.currentWaypointIndex < this.gameController.getWaypoints ().Length - 1) {
+		if (this.currentWaypointIndex < this.game.getWaypoints ().Length - 1) {
 			this.currentWaypointIndex += 1;
-			this.nextWaypiont = this.gameController.getWaypoints () [this.currentWaypointIndex];
+			this.nextWaypiont = this.game.getWaypoints () [this.currentWaypointIndex];
 			this.nextWaypiont.GetComponent<Renderer> ().material.color = Utils.getRandomColor();
 		}
 	}

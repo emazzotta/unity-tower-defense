@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour {
 			for (int z = 0; z < this.gameFieldHeight; z++) {
 				GameObject newTowerBase = Instantiate (originalBase);
 				newTowerBase.transform.SetParent (baseFolder.transform);
-				newTowerBase.GetComponent<BaseController>().setBuildable(true); 
+				newTowerBase.GetComponent<Base>().setBuildable(true); 
 				newTowerBase.transform.position = new Vector3 (originalBase.transform.position.x + x, 0.1f, originalBase.transform.position.z - z);
 				this.bases [x, z] = newTowerBase;
 			}
@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour {
 		while (x < this.gameFieldWidth) {
 			GameObject baseZ = this.bases[x, zAxis];
 			baseZ.GetComponent<Renderer> ().material.color = wayColor;
-			baseZ.GetComponent<BaseController>().setBuildable(false);
+			baseZ.GetComponent<Base>().setBuildable(false);
 			this.waypoints[x] = baseZ;
 
 			float randNumber = (float)Math.Round(UnityEngine.Random.Range(-1.0f, 1.0f));

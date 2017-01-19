@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TowerController : MonoBehaviour {
+public class Tower : MonoBehaviour {
 
 	Transform towerTransform;
 
@@ -17,28 +17,28 @@ public class TowerController : MonoBehaviour {
 	public float radius = 0;
 
 	//private float dist = Mathf.Infinity;
-	private MetallKeferController nearestMetallKeferController;
+	private MetallKefer nearestMetallKefer;
 
 	void Start () {
-		this.nearestMetallKeferController = null;
+		this.nearestMetallKefer = null;
 		towerTransform = transform.Find("Tower");
 	}
 	
 	void Update () {
-		MetallKeferController[] enemies = GameObject.FindObjectsOfType<MetallKeferController>();
+		MetallKefer[] enemies = GameObject.FindObjectsOfType<MetallKefer>();
 
-		foreach(MetallKeferController e in enemies) {
+		foreach(MetallKefer e in enemies) {
 			if (e != null && e.GetHealth () > 0) {
 				ShootAt (e);
 			}
 		}
 //
-//		if(nearestMetallKeferController == null) {
+//		if(nearestMetallKefer == null) {
 //			Debug.Log("No enemies?");
 //			return;
 //		}
 //
-//		Vector3 dir = nearestMetallKeferController.transform.position - this.transform.position;
+//		Vector3 dir = nearestMetallKefer.transform.position - this.transform.position;
 //
 //		Quaternion lookRot = Quaternion.LookRotation( dir );
 //
@@ -46,7 +46,7 @@ public class TowerController : MonoBehaviour {
 //
 	}
 
-	void ShootAt(MetallKeferController metallKefer) {
+	void ShootAt(MetallKefer metallKefer) {
 		GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, this.transform.position, this.transform.rotation);
 		bulletGO.transform.SetParent (this.transform);
 
