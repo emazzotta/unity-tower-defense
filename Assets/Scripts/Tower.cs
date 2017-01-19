@@ -25,19 +25,16 @@ public class Tower : MonoBehaviour {
 		MetallKefer[] enemies = GameObject.FindObjectsOfType<MetallKefer>();
 		this.nearestMetallKefer = GetClosestEnemy(enemies);
 
-		if(nearestMetallKefer == null) {
-			Debug.Log("No enemies?");
-			return;
-		}
+		if(nearestMetallKefer != null) {
+			if (nearestMetallKefer != null && nearestMetallKefer.GetHealth () > 0) {
+				ShootAt (nearestMetallKefer);
+			}
 
-		if (nearestMetallKefer != null && nearestMetallKefer.GetHealth () > 0) {
-			ShootAt (nearestMetallKefer);
-		}
-
-		Vector3 lookRotation = nearestMetallKefer.transform.position - this.transform.position;
-		if (lookRotation != Vector3.zero) {
-			var targetRotation = Quaternion.LookRotation(lookRotation);
-			transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5 * Time.deltaTime);
+			Vector3 lookRotation = nearestMetallKefer.transform.position - this.transform.position;
+			if (lookRotation != Vector3.zero) {
+				var targetRotation = Quaternion.LookRotation(lookRotation);
+				transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5 * Time.deltaTime);
+			}
 		}
 	}
 
