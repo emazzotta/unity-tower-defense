@@ -2,7 +2,7 @@
 
 An exercise to work with Unity.
 
-[[https://github.com/emazzotta/unity-tower-defense/blob/master/Assets/Images/game.png|alt=Game Image]]
+[![Game Image](https://github.com/emazzotta/unity-tower-defense/blob/master/Assets/Images/game.png)](https://github.com/emazzotta/unity-tower-defense)
 
 ## Authors
 
