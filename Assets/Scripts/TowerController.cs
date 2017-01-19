@@ -46,13 +46,13 @@ public class TowerController : MonoBehaviour {
 //
 	}
 
-	void ShootAt(MetallKeferController e) {
+	void ShootAt(MetallKeferController metallKefer) {
 		GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, this.transform.position, this.transform.rotation);
 		bulletGO.transform.SetParent (this.transform);
-		BulletController b = bulletGO.GetComponent<BulletController>();
-		b.target = e.transform;
+
+		Bullet b = bulletGO.GetComponent<Bullet>();
+		b.target = metallKefer;
 		b.damage = damage;
-		b.radius = radius;
 	}
 }
 

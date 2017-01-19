@@ -16,14 +16,14 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000011882952090}
-  - 33: {fileID: 33000010900851460}
-  - 136: {fileID: 136000011329211988}
-  - 23: {fileID: 23000010385541378}
-  - 54: {fileID: 54000010698538098}
-  - 114: {fileID: 114000010407668934}
+  - component: {fileID: 4000011882952090}
+  - component: {fileID: 33000010900851460}
+  - component: {fileID: 136000011329211988}
+  - component: {fileID: 23000010385541378}
+  - component: {fileID: 54000010698538098}
+  - component: {fileID: 114000010407668934}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -40,10 +40,10 @@ Transform:
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -3.3310738, y: -2.851275, z: 6.194981}
   m_LocalScale: {x: 0.05, y: 0.05000003, z: 0.05000003}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!23 &23000010385541378
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -58,7 +58,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -66,7 +68,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -103,9 +105,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000011406605030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a93e1d9bf2aa49768c398f6fd77806b, type: 3}
+  m_Script: {fileID: 11500000, guid: 480fc687ce77b4721a8b045a82db7dae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 4
+  damage: 10
 --- !u!136 &136000011329211988
 CapsuleCollider:
   m_ObjectHideFlags: 1
