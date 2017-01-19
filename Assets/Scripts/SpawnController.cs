@@ -6,11 +6,13 @@ public class SpawnController : MonoBehaviour {
 	public GameObject enemiesFolder;
 	public GameObject originalEnemy;
 	public int enemiesToSpawn;
+	public float spawnInterval;
+
     private int enemiesSpawned;
 	
 	void Start () {
         enemiesSpawned = 0;
-        InvokeRepeating("SpawnEnemy", 0, 2f);
+		InvokeRepeating("SpawnEnemy", 0, spawnInterval);
 	}
 
     void SpawnEnemy() {
