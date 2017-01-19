@@ -5,9 +5,7 @@ public class Tower : MonoBehaviour {
 
 	public float range = 10f;
 	public GameObject bulletPrefab;
-
 	public int cost = 5;
-
 	public int damage = 10;
 	public float radius = 0;
 
@@ -16,7 +14,6 @@ public class Tower : MonoBehaviour {
 	void Start () {
 		InvokeRepeating("AimAtTarget", 0, 0.5f);
 		this.nearestMetallKefer = null;
-		towerTransform = transform.Find("Tower");
 	}
 
 	void AimAtTarget() {
