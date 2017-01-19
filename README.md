@@ -2,6 +2,8 @@
 
 An exercise to work with Unity.
 
+[[https://github.com/emazzotta/unity-tower-defense/blob/master/Assets/Images/game.png|alt=Game Image]]
+
 ## Authors
 
 [Emanuele Mazzotta](mailto:hello@mazzotta.me)

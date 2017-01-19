@@ -3,8 +3,6 @@ using System.Collections;
 
 public class Tower : MonoBehaviour {
 
-	Transform towerTransform;
-
 	public float range = 10f;
 	public GameObject bulletPrefab;
 
