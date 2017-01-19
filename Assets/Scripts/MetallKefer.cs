@@ -40,7 +40,7 @@ public class MetallKefer : MonoBehaviour {
 	private void moveToNextWaypoint() {
 		float step = movementSpeed * Time.deltaTime;
 
-		Vector3 lookRotation = this.nextWaypiont.transform.position - transform.position;
+		Vector3 lookRotation = nextWaypiont.transform.position - this.transform.position;
 		if (lookRotation != Vector3.zero) {
 			var targetRotation = Quaternion.LookRotation(lookRotation);
 			transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5 * Time.deltaTime);

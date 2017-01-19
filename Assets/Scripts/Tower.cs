@@ -26,24 +26,22 @@ public class Tower : MonoBehaviour {
 	
 	void Update () {
 		MetallKefer[] enemies = GameObject.FindObjectsOfType<MetallKefer>();
+		this.nearestMetallKefer = GetClosestEnemy(enemies);
 
-		foreach(MetallKefer e in enemies) {
-			if (e != null && e.GetHealth () > 0) {
-				ShootAt (e);
-			}
+        if(nearestMetallKefer == null) {
+            Debug.Log("No enemies?");
+            return;
+        }
+
+		if (nearestMetallKefer != null && nearestMetallKefer.GetHealth () > 0) {
+			ShootAt (nearestMetallKefer);
 		}
-//
-//		if(nearestMetallKefer == null) {
-//			Debug.Log("No enemies?");
-//			return;
-//		}
-//
-//		Vector3 dir = nearestMetallKefer.transform.position - this.transform.position;
-//
-//		Quaternion lookRot = Quaternion.LookRotation( dir );
-//
-//		//Debug.Log(lookRot.eulerAngles.y);
-//
+
+		Vector3 lookRotation = nearestMetallKefer.transform.position - this.transform.position;
+		if (lookRotation != Vector3.zero) {
+			var targetRotation = Quaternion.LookRotation(lookRotation);
+			transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5 * Time.deltaTime);
+		}
 	}
 
 	void ShootAt(MetallKefer metallKefer) {
@@ -53,6 +51,20 @@ public class Tower : MonoBehaviour {
 		Bullet b = bulletGO.GetComponent<Bullet>();
 		b.target = metallKefer;
 		b.damage = damage;
+	}
+
+	MetallKefer GetClosestEnemy(MetallKefer[] enemies) {
+   		MetallKefer tMin = null;
+   		float minDist = Mathf.Infinity;
+    	Vector3 currentPos = transform.position;
+    	foreach (MetallKefer enemy in enemies) {
+        	float dist = Vector3.Distance(enemy.transform.position, currentPos);
+        	if (dist < minDist)	{
+            	tMin = enemy;
+            	minDist = dist;
+        	}
+    	}
+    	return tMin;
 	}
 }
 
