@@ -6,7 +6,7 @@ public class MetallKeferController : MonoBehaviour {
 	private GameController gameController;
 	private GameObject[] baseBuildable;
 	private GameObject nextWaypiont;
-    private float health;
+    private int health;
 	private int currentWaypointIndex = 0;
 	private int movementSpeed = 2;
 
@@ -29,13 +29,8 @@ public class MetallKeferController : MonoBehaviour {
 		if (this.currentWaypointIndex < this.gameController.getWaypoints ().Length - 1) {
 			this.currentWaypointIndex += 1;
 			this.nextWaypiont = this.gameController.getWaypoints () [this.currentWaypointIndex];
-			this.nextWaypiont.GetComponent<Renderer> ().material.color = this.getRandomColor();
+			this.nextWaypiont.GetComponent<Renderer> ().material.color = Utils.getRandomColor();
 		}
-	}
-
-	private Color getRandomColor() {
-		Color newColor = new Color( Random.value, Random.value, Random.value, 1.0f );
-		return newColor;
 	}
 
 	private void setInitialPosition() {
@@ -54,7 +49,14 @@ public class MetallKeferController : MonoBehaviour {
 
 	}
 
-    public void TakeDamage(float damage) {
-        health -= damage;
+	public void TakeDamage(int damage) {
+		health -= damage;
+		if (this.gameObject && health <= 0) {
+			Destroy (this.gameObject);
+		}
     }
+
+	public int GetHealth() {
+		return this.health;
+	}
 }
