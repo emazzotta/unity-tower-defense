@@ -17,18 +17,21 @@ public class Bullet : MonoBehaviour {
 			this.DestroyBullet ();
 		}
 
-		Vector3 direction = target.transform.position - this.transform.position;
-		float distanceCurrentFrame = speed * Time.deltaTime;
-		
+		if (target != null) {
+			Vector3 direction = target.transform.position - this.transform.position;
+			float distanceCurrentFrame = speed * Time.deltaTime;
 
-		if(direction.magnitude <= distanceCurrentFrame) {
-			DoBulletHit();
-			this.DestroyBullet ();
-		} else {
-			this.transform.Translate(direction.normalized * distanceCurrentFrame, Space.World);
-            Quaternion targetRotation = Quaternion.LookRotation(direction);
-			this.transform.rotation = Quaternion.Lerp(this.transform.rotation, targetRotation, Time.deltaTime*speed);
+
+			if(direction.magnitude <= distanceCurrentFrame) {
+				DoBulletHit();
+				this.DestroyBullet ();
+			} else {
+				this.transform.Translate(direction.normalized * distanceCurrentFrame, Space.World);
+				Quaternion targetRotation = Quaternion.LookRotation(direction);
+				this.transform.rotation = Quaternion.Lerp(this.transform.rotation, targetRotation, Time.deltaTime*speed);
+			}
 		}
+
 	}
 
     void DoBulletHit() {
