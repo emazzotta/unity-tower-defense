@@ -131,9 +131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09677afde603444e8a9c836f873c4235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalBase: {fileID: 1000011357009410, guid: 03231f691b01a4e9dafa2dab09e58670,
-    type: 2}
-  baseFolder: {fileID: 400346575}
+  originalBase: {fileID: 0}
+  baseFolder: {fileID: 0}
 --- !u!1 &334757038
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,7 +571,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4015ab734d8a641f2b2cb17f6c67b2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemiesFolder: {fileID: 1423638645}
+  enemiesFolder: {fileID: 1423638645}
   originalEnemy: {fileID: 1000012413404144, guid: e1d901d81e0b84460bb3b15ef273ecf1,
     type: 2}
   amountOfEnemies: 20
