@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -651,7 +651,7 @@ MonoBehaviour:
   enemiesFolder: {fileID: 1423638645}
   originalEnemy: {fileID: 1000012413404144, guid: e1d901d81e0b84460bb3b15ef273ecf1,
     type: 2}
-  amountOfEnemies: 1
+  enemiesToSpawn: 4
 --- !u!4 &1377874986
 Transform:
   m_ObjectHideFlags: 0

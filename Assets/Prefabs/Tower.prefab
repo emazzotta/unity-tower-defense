@@ -494,5 +494,5 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1000011406605030, guid: 72eb27991520e4ce9b26fc70e6f1f937,
     type: 2}
   cost: 5
-  damage: 50
+  damage: 20
   radius: 0

@@ -970,7 +970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
-  movementSpeed: 5
+  movementSpeed: 1
 --- !u!137 &137000012356569766
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
