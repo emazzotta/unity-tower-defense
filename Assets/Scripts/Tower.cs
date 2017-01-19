@@ -10,28 +10,25 @@ public class Tower : MonoBehaviour {
 
 	public int cost = 5;
 
-	//float fireCooldown = 0.5f;
-	//float fireCooldownLeft = 0;
-
 	public int damage = 10;
 	public float radius = 0;
 
-	//private float dist = Mathf.Infinity;
 	private MetallKefer nearestMetallKefer;
 
 	void Start () {
+		InvokeRepeating("AimAtTarget", 0, 0.5f);
 		this.nearestMetallKefer = null;
 		towerTransform = transform.Find("Tower");
 	}
-	
-	void Update () {
+
+	void AimAtTarget() {
 		MetallKefer[] enemies = GameObject.FindObjectsOfType<MetallKefer>();
 		this.nearestMetallKefer = GetClosestEnemy(enemies);
 
-        if(nearestMetallKefer == null) {
-            Debug.Log("No enemies?");
-            return;
-        }
+		if(nearestMetallKefer == null) {
+			Debug.Log("No enemies?");
+			return;
+		}
 
 		if (nearestMetallKefer != null && nearestMetallKefer.GetHealth () > 0) {
 			ShootAt (nearestMetallKefer);
@@ -43,6 +40,7 @@ public class Tower : MonoBehaviour {
 			transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5 * Time.deltaTime);
 		}
 	}
+
 
 	void ShootAt(MetallKefer metallKefer) {
 		GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, this.transform.position, this.transform.rotation);
