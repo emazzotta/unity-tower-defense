@@ -6,12 +6,12 @@ public class MetallKefer : MonoBehaviour {
 	private GameController game;
 	private GameObject[] baseBuildable;
 	private GameObject nextWaypiont;
-    private int health;
 	private int currentWaypointIndex = 0;
-	private int movementSpeed = 2;
+
+	public int health;
+	public int movementSpeed;
 
 	void Start () {
-        this.health = 100;
 		this.game = GameObject.FindObjectOfType<GameController>();
 		this.nextWaypiont = this.game.getWaypoints () [this.currentWaypointIndex];
 		this.setInitialPosition ();
