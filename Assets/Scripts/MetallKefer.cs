@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MetallKefer : MonoBehaviour {
 
-	private Game game;
+	private GameController game;
 	private GameObject[] baseBuildable;
 	private GameObject nextWaypiont;
     private int health;
@@ -12,7 +12,7 @@ public class MetallKefer : MonoBehaviour {
 
 	void Start () {
         this.health = 100;
-		this.game = GameObject.FindObjectOfType<Game>();
+		this.game = GameObject.FindObjectOfType<GameController>();
 		this.nextWaypiont = this.game.getWaypoints () [this.currentWaypointIndex];
 		this.setInitialPosition ();
 	}
