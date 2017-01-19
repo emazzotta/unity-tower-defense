@@ -971,7 +971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   movementSpeed: 2
-  scoreAmount: 10
+  scoreAmount: 100
 --- !u!137 &137000012356569766
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
