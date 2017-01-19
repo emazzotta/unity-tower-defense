@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -134,6 +134,7 @@ MonoBehaviour:
   originalBase: {fileID: 1000011357009410, guid: 03231f691b01a4e9dafa2dab09e58670,
     type: 2}
   baseFolder: {fileID: 400346575}
+  scoreLabel: {fileID: 368578648}
 --- !u!1 &334757038
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,7 +632,7 @@ GameObject:
   - component: {fileID: 1377874986}
   - component: {fileID: 1377874985}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -651,7 +652,8 @@ MonoBehaviour:
   enemiesFolder: {fileID: 1423638645}
   originalEnemy: {fileID: 1000012413404144, guid: e1d901d81e0b84460bb3b15ef273ecf1,
     type: 2}
-  enemiesToSpawn: 4
+  enemiesToSpawn: 20
+  spawnInterval: 1
 --- !u!4 &1377874986
 Transform:
   m_ObjectHideFlags: 0
@@ -899,8 +901,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 381, y: 17.5}
-  m_SizeDelta: {x: 80, y: 35}
+  m_AnchoredPosition: {x: 369.6, y: 17.5}
+  m_SizeDelta: {x: 60, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2083805625
 MonoBehaviour:

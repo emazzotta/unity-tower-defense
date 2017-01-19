@@ -10,6 +10,7 @@ public class MetallKefer : MonoBehaviour {
 
 	public int health;
 	public int movementSpeed;
+	public int scoreAmount;
 
 	void Start () {
 		this.game = GameObject.FindObjectOfType<GameController>();
@@ -53,6 +54,7 @@ public class MetallKefer : MonoBehaviour {
 		health -= damage;
 		if (this.gameObject && health <= 0) {
 			Destroy (this.gameObject);
+			this.game.increaseScore(scoreAmount);
 		}
     }
 

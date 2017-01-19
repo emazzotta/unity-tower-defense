@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
 
 	public GameObject originalBase;
 	public GameObject baseFolder;
+	public GameObject scoreLabel;
 
 	private GameObject gameField;
 	private GameObject[,] bases;
@@ -70,5 +72,13 @@ public class GameController : MonoBehaviour {
 
 	public GameObject[] getWaypoints() {
 		return this.waypoints;
+	}
+
+	public void increaseScore(int newScore) {
+		int newSumscore = 0;
+		Text score = scoreLabel.GetComponent<Text>();
+		int currentScore = int.Parse(score.text);
+		newSumscore = currentScore + newScore;
+		score.text = newSumscore.ToString();
 	}
 }
