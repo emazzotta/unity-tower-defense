@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< 9fc30f8d40de6845c04c150ccaf96fdbc3ff8dc1
 guid: 19529da1e9fe2452484435c44699f580
 folderAsset: yes
 timeCreated: 1484866339
+=======
+guid: f9156efbd3b8547928343afecb147242
+folderAsset: yes
+timeCreated: 1484866597
+>>>>>>> Add meta files
 licenseType: Free
 DefaultImporter:
   userData: 

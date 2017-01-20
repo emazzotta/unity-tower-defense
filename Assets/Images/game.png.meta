@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< 9fc30f8d40de6845c04c150ccaf96fdbc3ff8dc1
 guid: b43d924eb31d946a6b9692720171e363
 timeCreated: 1484866341
+=======
+guid: e03e6496c32b843529053a0eef13007c
+timeCreated: 1484866599
+>>>>>>> Add meta files
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
