@@ -1,6 +1,4 @@
-[![License](http://img.shields.io/:license-mit-blue.svg)](LICENSE.md)
-
-# Unity Tower Defense
+# Unity Tower Defense [![License](http://img.shields.io/:license-mit-blue.svg)](LICENSE.md)
 
 An exercise to work with Unity.
 
